@@ -9,12 +9,14 @@ namespace FirstApplication.Models
     public class Database
     {
         public Products Products { get; set; }
+        public Users Users { get; set; }
 
         public Database()
         {
             string connString = @"Server=DESKTOP-T8L630M;Database=.net;Integrated Security=true";
             SqlConnection conn = new SqlConnection(connString);
             Products = new Products(conn);
+            Users = new Users(conn);
         }
 
     }

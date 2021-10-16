@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth\AdminAccess.cs" />
     <Compile Include="Controllers\BoiController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -132,8 +133,10 @@
     </Compile>
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\Entity\Product.cs" />
+    <Compile Include="Models\Entity\User.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Tables\Products.cs" />
+    <Compile Include="Models\Tables\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +187,7 @@
     <Content Include="Views\Product\View.cshtml" />
     <Content Include="Views\Product\Cart.cshtml" />
     <Content Include="Views\Product\Checkout.cshtml" />
+    <Content Include="Views\Product\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

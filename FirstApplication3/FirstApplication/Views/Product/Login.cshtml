@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<span class="text-danger">@ViewBag.massage</span>
+<form action="/Product/Login" method="post">
+    <input type="text" name="Username" palceholder="Username" class="form-control">
+    <input type="password" name="Password" palceholder="Password" class="form-control">
+    <input type="submit" class="btn btn_primary">
+</form>
+

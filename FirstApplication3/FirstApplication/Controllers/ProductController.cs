@@ -8,12 +8,14 @@ using FirstApplication.Models;
 using System.Data.SqlClient;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
+using System.Web.Security;
 
 namespace FirstApplication.Controllers
 {
     public class ProductController : Controller
     {
         [HttpGet]
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -26,6 +28,7 @@ namespace FirstApplication.Controllers
             db.Products.Add(s);
             return View();
         }
+        
         public ActionResult View() {
             Database db = new Database();
             var products = db.Products.GetAll();
@@ -81,6 +84,22 @@ namespace FirstApplication.Controllers
             Session["Message"] = "True";
             return Redirect("/product/View");
         }
-
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(string Username, string Password)
+        {
+            Database db = new Database();
+            var user = db.Users.Authenticate(Username, Password);
+            if (user != null)
+            {
+                FormsAuthentication.SetAuthCookie(user.Username, true);
+                return RedirectToAction("Create");
+            }
+            ViewBag.massage = "Invalid username or password";
+            return View();
+        }
     }
 }
