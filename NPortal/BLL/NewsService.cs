@@ -31,7 +31,7 @@ namespace BLL
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<News>(n);
-            NewsRepo.Add(data);
+            NewsRepo.AddNews(data);
         }
         public static void Edit(NewsModel n)
         {
@@ -41,13 +41,18 @@ namespace BLL
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<News>(n);
-            NewsRepo.Edit(data);
+            NewsRepo.EditNews(data);
 
         }
 
         public static void Delete(int id)
         {
-            NewsRepo.Delete(id);
+            NewsRepo.DeleteNews(id);
+        }
+		public static void GetNewsByDateAndCatagory(string catagory,DateTime d)
+        {
+            NewsRepo.SearchByCatagoryAndDate(catagory, d);
+
         }
 
         public static List<NewsModel> GetNewsByCatagory(string catagory)
@@ -57,21 +62,15 @@ namespace BLL
                 c.CreateMap<News, NewsModel>();
             });
             var mapper = new Mapper(config);
-            var data = mapper.Map<List<NewsModel>>(NewsRepo.ByCatagory(catagory));
+            var data = mapper.Map<List<NewsModel>>(NewsRepo.SearchByCatagory(catagory));
             return data;
-           // return NewsRepo.ByCatagory(catagory);
-
         }
 
-        public static void GetNewsByDate(DateTime d)
+        public static void GetNewsByDate(DateTime date)
         {
-            NewsRepo.ByDate(d);
+            NewsRepo.SearchByDate(date);
         }
 
-        public static void GetNewsByDateAndCatagory(string cata,DateTime d)
-        {
-            NewsRepo.ByCatagoryAndDate(cata, d);
-
-        }
+        
     }
 }
