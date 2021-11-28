@@ -1,0 +1,20 @@
+<div>
+    <h1>Open Projects List</h1>
+  
+      <table border="1">
+        <tr>
+          <th>Id</th>
+          <th>Project Name</th>
+          <th>Description</th>
+          <th>Create Date</th>
+          <th>Status</th>
+        </tr>
+        <tr ng-repeat="p in products">
+            <td>{{p.id}}</td>
+            <td>{{p.projectName}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.createdDate}}</td>
+            <td>{{p.status}}</td>
+        </tr>
+      </table>
+  </div>

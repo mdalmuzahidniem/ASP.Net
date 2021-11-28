@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="assignmentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AssignedProject">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="projectId" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_AssignedProjects_Projects" FromRole="AssignedProjects" ToRole="Projects" />
+    <NavigationProperty Name="User" Relationship="Self.FK_AssignedProjects_Users" FromRole="AssignedProjects" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="projectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="createdDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="completedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="AssignedProjects" Relationship="Self.FK_AssignedProjects_Projects" FromRole="Projects" ToRole="AssignedProjects" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Projects_Users" FromRole="Projects" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="AssignedProjects" Relationship="Self.FK_AssignedProjects_Users" FromRole="Users" ToRole="AssignedProjects" />
+    <NavigationProperty Name="Projects" Relationship="Self.FK_Projects_Users" FromRole="Users" ToRole="Projects" />
+  </EntityType>
+  <Association Name="FK_AssignedProjects_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+    <End Role="AssignedProjects" Type="Self.AssignedProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AssignedProjects">
+        <PropertyRef Name="projectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignedProjects_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="AssignedProjects" Type="Self.AssignedProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AssignedProjects">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Projects" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="creatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="assignmentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AssignedProjects" EntityType="Self.AssignedProject" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_AssignedProjects_Projects" Association="Self.FK_AssignedProjects_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="AssignedProjects" EntitySet="AssignedProjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignedProjects_Users" Association="Self.FK_AssignedProjects_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="AssignedProjects" EntitySet="AssignedProjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_Users" Association="Self.FK_Projects_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
