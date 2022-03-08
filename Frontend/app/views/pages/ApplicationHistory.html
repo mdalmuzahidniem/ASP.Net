@@ -1,0 +1,33 @@
+<div ng-include="'views/inc/top_nav.html'"></div>
+<div>
+    <h1>{{fname}}</h1>
+    <style>
+        #frm {
+            width: 1000px;
+            margin: 20px 190px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px cyan;
+            background-color: transparent;
+            color: #34495e;
+        }
+    </style>
+    
+    <h2 align="center"class="text text-dark">Application History and status</h2>
+    <table id="frm" class="table table-bordered">
+        <tr align="center" style="width: 145px; height: 45px; font-size: 20px;" class="text text-primary">
+            <td>Application Discription</td>
+            <td>Leave Start date</td>
+            <td>Leave End Date</td>
+            <td>Status</td>
+        </tr>
+        
+        <tr ng-repeat="n in info" style="width: 145px; height: 45px; font-size: 20px;" align="center" class="text text-info">
+            <td>{{n.application_subject}}</td>
+            <td>{{n.start_date}}</td>
+            <td>{{n.end_date}}</td>
+            <td>{{n.application_status}}</td>
+        </tr>
+        
+    </table>
+</div>

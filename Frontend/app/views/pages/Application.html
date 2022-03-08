@@ -1,0 +1,41 @@
+<div ng-include="'views/inc/top_nav.html'"></div>
+<div>
+
+    <style>
+        #frm {
+            width: 600px;
+            margin: 10px 380px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 50px green;
+            background-color: transparent;
+            color: #34495e;
+        }
+    </style>
+    <h2 class="text-info" align="center">Fill up the form for taking leave</h2>
+    <a class="btn btn-success" href="#!ApplicationHistory" >Application History</a>
+    <form id="frm" ng-submit="submit()">
+        <table border="0" height="400px"width="500px" align="center">
+            
+            <tr style="width: 145px; height: 45px; font-size: 20px;" align="center">
+                <td>Leave Start Date</td>
+                <td><input type="date" name="start_date" ng-model="data.start_date"  value="dd.MM.yyyy" required="required"/></td>
+            </tr>
+            <tr style="width: 145px; height: 45px; font-size: 20px;" align="center">
+                <td>Leave End Date</td>
+                <td><input type="date" name="end_date" ng-model="data.end_date"  value="dd.MM.yyyy" required="required"/></td>
+            </tr>
+            <tr style="width: 145px; height: 45px; font-size: 20px;color:red;">
+            <td colspan="2" align="center">Why do you want to take leave?</td></tr>
+            <tr style="width: 145px; height: 45px; font-size: 20px;" align="center">
+                <td>Reason of taking leave:</td>
+                <td><textarea name="application_subject" ng-model="data.application_subject" required="required"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-primary" value="Sent Leave Request"/></td>
+            </tr>
+        </table>
+    </form>
+    
+</div>

@@ -1,0 +1,43 @@
+<div ng-include="'views/inc/top_nav.html'"></div>
+<div>
+
+  <style>
+    #frm {
+        width: 1200px;
+        margin: 20px 80px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px blue;
+        background-color: transparent;
+        color: #34495e;
+    }
+</style>
+
+
+<h2 align="center" class="text text-primary">{{fname}}</h2>
+
+    <table align="center" id="frm" class="table table-bordered">
+        <tr style="width: 145px; height: 45px; font-size: 20px;" class="text text-primary">
+            <td>Service id</td>
+            <td>Quantity</td>
+            <td>Service Details</td>
+            <td>Service receiver's Information</td>
+            <td>Service Charge</td>
+        
+        
+        <tr ng-repeat="p in products" style="width: 145px; height: 45px; font-size: 20px;" class="text text-success">
+        
+        <td>{{p.service_id}}</td>
+        <td>{{p.quantity}}</td>
+        <td>
+            <a class="btn btn-info" href="#!AssignService/{{p.service_id}}">See Details</a>
+        </td>
+        <td>
+            <a class="btn btn-info" href="#!ServiceDetails/{{p.order_id}}">See Details</a>
+        </td>
+
+        <td>{{p.unit_price}}</td>
+    </tr>
+        
+    </table>
+</div>

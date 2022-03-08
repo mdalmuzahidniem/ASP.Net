@@ -1,0 +1,11 @@
+app.controller("Logout",function($http,$location){
+    //localStorage.removeItem('token');
+    $http.get("https://localhost:44300/api/Logout")
+    .then(function(rsp){
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+        $location.path("/Login");
+    },function(err){
+        console.log(err);
+    });
+});

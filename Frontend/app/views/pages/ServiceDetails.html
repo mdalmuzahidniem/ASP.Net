@@ -1,0 +1,35 @@
+<div ng-include="'views/inc/top_nav.html'"></div>
+
+<div>
+    <style>
+        #frm {
+            width: 1200px;
+            margin: 20px 80px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 50px blue;
+            background-color: transparent;
+            color: #34495e;
+        }
+    </style>
+<h2 align="center">Service receiver's details</h2>
+<table id="frm" class="table table-bordered">
+    <tr style="width: 145px; height: 45px; font-size: 20px;" align="center" class="text text-primary">
+        <td>Customer Name</td>
+        <td>Customer Phone</td>
+        <td>Customer House</td>
+        <td>Road</td>
+        <td>Order Place Date</td>
+        <td>Servicing Address</td>
+        
+    </tr>
+    <tr ng-repeat="p in products" align="center" style="width: 145px; height: 45px; font-size: 20px;" class="text text-success">
+        <td>{{p.User.name}}</td>
+        <td>{{p.User.phone}}</td>
+        <td>{{p.User.house}}</td>
+        <td>{{p.User.road}}</td>
+        <td>{{p.order_place_date}}</td>
+        <td>{{p.delevary_address}}</td>
+    </tr>
+</table>
+</div>

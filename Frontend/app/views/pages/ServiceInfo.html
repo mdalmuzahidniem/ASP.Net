@@ -1,0 +1,46 @@
+<div ng-include="'views/inc/top_nav.html'"></div>
+
+<div>
+
+    <style>
+        #frm {
+            width: 800px;
+            margin: 20px 280px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 50px blue;
+            background-color: transparent;
+            color: #34495e;
+        }
+    </style>
+    
+    
+    <h2 class="text text-info" align="center">My service profile</h2>
+    <form id="frm" ng-submit="submit()">
+        <table width="600px" class="table table-bordered" align="center">
+            <tr align="center" style="width: 145px; height: 45px; font-size: 20px;" class="text text-primary">
+                <td>My Employee ID</td>
+                <td>Salary</td>
+                <td>Work area</td>
+                <td>Work Status</td>
+            </tr>
+            <tr align="center" style="width: 245px; height: 45px; font-size: 20px;" class="text text-success">
+                <td>{{info.userid}}</td>
+                <td>{{info.salary}}</td>
+                <td>{{info.work_area}}</td>
+                <td>
+                    {{info.work_status}}
+                </td>
+            </tr>
+        </table>
+        <div align="center">
+            <h4>change work status</h4>
+            <select ng-model="status" style="width: 145px; height: 45px; font-size:20px; border-radius: 6px;">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <input type="submit">
+           
+        </div>
+    </form>
+</div>

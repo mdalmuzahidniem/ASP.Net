@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+  <head>
+    <!--<base href="/" />-->
+    <meta charset="utf-8">
+    <script src="app/lib/angular.min.js"></script>
+
+    <script src="app/lib/angular.route.min.js"></script>
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title></title>
+  </head>
+  <body ng-app="myApp">
+    <!-- <div ng-include="'views/inc/top_nav.html'"></div> -->
+      
+    <div ng-view> </div>
+    <div ng-include="'views/inc/footer.html'"></div>
+  </body>
+</html>
+
+<!-- Add Services here -->
+<script src="app/services/ajax.js"></script>
+<script src="app/services/interCeptor.js"></script>
+
+<!-- Add Controllers here -->
+
+<script src="app/controllers/Dashboard.js"></script>
+<script src="app/controllers/Workhistory.js"></script>
+<script src="app/controllers/Wallet.js"></script>
+<script src="app/controllers/Application.js"></script>
+<script src="app/controllers/ApplicationHistory.js"></script>
+<script src="app/controllers/Personalinfo.js"></script>
+<script src="app/controllers/ServiceInfo.js"></script>
+<script src="app/controllers/AssignService.js"></script>
+<script src="app/controllers/ServiceDetails.js"></script>
+<script src="app/controllers/Login.js"></script>
+<script src="app/controllers/Logout.js"></script>
