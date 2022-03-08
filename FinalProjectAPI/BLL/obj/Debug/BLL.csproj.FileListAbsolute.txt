@@ -1,0 +1,16 @@
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\BLL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\BLL.pdb
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\AutoMapper.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\DAL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\EntityFramework.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\DAL.pdb
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\DAL.dll.config
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\AutoMapper.xml
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\EntityFramework.xml
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\obj\Debug\BLL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\obj\Debug\BLL.pdb
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\BEL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BLL\bin\Debug\BEL.pdb

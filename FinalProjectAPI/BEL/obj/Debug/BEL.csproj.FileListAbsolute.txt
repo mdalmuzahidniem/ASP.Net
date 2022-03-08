@@ -1,0 +1,6 @@
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BEL\bin\Debug\BEL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BEL\bin\Debug\BEL.pdb
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BEL\obj\Debug\BEL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\BEL\obj\Debug\BEL.pdb

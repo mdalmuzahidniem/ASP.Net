@@ -1,0 +1,10 @@
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\bin\Debug\DAL.dll.config
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\bin\Debug\DAL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\bin\Debug\DAL.pdb
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\bin\Debug\EntityFramework.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\bin\Debug\EntityFramework.xml
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\obj\Debug\DAL.dll
+E:\downloads\2021-2022 Fall Semester\.Net\Final_Term_project\FinalProjectAPI\DAL\obj\Debug\DAL.pdb
